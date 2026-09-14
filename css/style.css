@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Estilização Geral e Layout
+   ========================================================================== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Cabecalho e Navegacao */
+header {
+  background-color: #0d6efd;
+  color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* Barra de Saudacao Temporal (JavaScript) */
+#saudacao-tempo {
+  display: block;
+  background-color: #e9ecef;
+  color: #495057;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* ==========================================================================
+   Ajustes do Carrossel e Imagens (Fase 2)
+   ========================================================================== */
+.carousel-inner {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+}
+
+.carousel-item img {
+  max-height: 350px;
+  object-fit: contain;
+  padding: 15px;
+}
+
+/* ==========================================================================
+   Formularios de Agendamento e Cadastro
+   ========================================================================== */
+form {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+form h2,
+form h3,
+form h4 {
+  color: #0d6efd;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Estilo dos botoes dos formulários */
+form button[type="submit"] {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+/* Rodape */
+footer {
+  background-color: #212529;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

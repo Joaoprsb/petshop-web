@@ -6,97 +6,92 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Serviços - PetShop Amicão</title>
+    <title>PetShop Amigo Fiel - Serviços</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1>PetShop Amicão</h1>
-      <p>Cuidando do seu melhor amigo com carinho e dedicação</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
+      <h1>PetShop Amigo Fiel</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços e Agendamento</a></li>
+          <li><a href="contato.html">Contato e Cadastro</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <h2>Nossos Serviços</h2>
+    <main style="max-width: 800px; margin: 20px auto; padding: 10px">
+      <h2>Agendamento de Banho e Tosa</h2>
 
-      <p>
-        Conheça os serviços oferecidos pela PetShop Amicão para manter
-        seu pet sempre limpo, saudável e bem cuidado.
-      </p>
-
-      <section>
-        <h3>Serviços Disponíveis</h3>
-
-        <article>
-          <h4>Banho</h4>
-          <p>
-            Banho completo utilizando produtos de alta qualidade para
-            manter seu pet limpo, cheiroso e confortável.
-          </p>
-          <p><strong>Tele-busca:</strong> Não</p>
-          <p><strong>Valor:</strong> R$ 50,00</p>
-        </article>
-
-        <hr />
-
-        <article>
-          <h4>Banho com Tele-busca</h4>
-          <p>
-            Serviço de banho acompanhado de tele-busca, oferecendo
-            mais praticidade para o tutor.
-          </p>
-          <p><strong>Tele-busca:</strong> Sim</p>
-          <p><strong>Valor:</strong> R$ 70,00</p>
-        </article>
-
-        <hr />
-
-        <article>
-          <h4>Banho e Tosa</h4>
-          <p>
-            Banho completo com tosa realizada por profissionais
-            especializados, garantindo conforto e bem-estar ao pet.
-          </p>
-          <p><strong>Tele-busca:</strong> Não</p>
-          <p><strong>Valor:</strong> R$ 90,00</p>
-        </article>
-
-        <hr />
-
-        <article>
-          <h4>Banho e Tosa com Tele-busca</h4>
-          <p>
-            Serviço completo de banho e tosa com transporte do pet até
-            o estabelecimento e retorno para casa.
-          </p>
-          <p><strong>Tele-busca:</strong> Sim</p>
-          <p><strong>Valor:</strong> R$ 110,00</p>
-        </article>
-      </section>
+      <form id="form-agendamento">
+        <p>
+          <label for="nomeClienteAg">Nome do Tutor: *</label><br />
+          <input
+            type="text"
+            id="nomeClienteAg"
+            required
+            placeholder="Seu nome"
+          />
+        </p>
+        <p>
+          <label for="nomePetAg">Nome do Pet: *</label><br />
+          <input
+            type="text"
+            id="nomePetAg"
+            required
+            placeholder="Nome do pet"
+          />
+        </p>
+        <p>
+          <strong>Serviços Desejados: *</strong><br />
+          <input type="checkbox" id="servicoBanho" value="Banho" />
+          <label for="servicoBanho">Banho</label>
+          <input type="checkbox" id="servicoTosa" value="Tosa" />
+          <label for="servicoTosa">Tosa</label>
+        </p>
+        <p>
+          <strong>Método de Agendamento: *</strong><br />
+          <input
+            type="radio"
+            id="telebusca"
+            name="metodo"
+            value="Tele-busca"
+            required
+          />
+          <label for="telebusca">Tele-busca (Buscamos no local)</label
+          ><br />
+          <input
+            type="radio"
+            id="local"
+            name="metodo"
+            value="Entrega no Local"
+            required
+          />
+          <label for="local"
+            >Entrega do pet no local pelo tutor</label
+          >
+        </p>
+        <p>
+          <label for="dataAg">Data do Agendamento: *</label><br />
+          <input type="date" id="dataAg" required />
+        </p>
+        <p>
+          <label for="horaAg">Horário: *</label><br />
+          <input type="time" id="horaAg" required />
+        </p>
+        <button type="submit">Confirmar Agendamento</button>
+      </form>
     </main>
 
     <footer>
-      <hr />
-
-      <p>&copy; 2026 PetShop Amicão. Todos os direitos reservados.</p>
-
-      <p>E-mail: contato@petshopamicao.com.br</p>
-
-      <p>Telefone: (51) 99999-9999</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
-      </nav>
+      <p>
+        &copy; 2026 PetShop Amigo Fiel. Todos os direitos reservados.
+      </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

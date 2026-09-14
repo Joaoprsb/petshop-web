@@ -6,61 +6,125 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Contato - PetShop Amicão</title>
+    <title>PetShop Amigo Fiel - Cadastro e Contato</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1>PetShop Amicão</h1>
-      <p>Cuidando do seu melhor amigo com carinho e dedicação</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
+      <h1>PetShop Amigo Fiel</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços e Agendamento</a></li>
+          <li><a href="contato.html">Contato e Cadastro</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <h2>Entre em Contato</h2>
+    <main style="max-width: 800px; margin: 20px auto; padding: 10px">
+      <h2>Formulário de Cadastro do Cliente e do Pet</h2>
 
-      <p>
-        Entre em contato com o PetShop Amicão para tirar dúvidas sobre
-        produtos, serviços e disponibilidade de horários.
-      </p>
-
-      <section>
-        <h3>Informações de Contato</h3>
-        <p><strong>E-mail:</strong> contato@petshopamicao.com.br</p>
-        <p><strong>Telefone:</strong> (51) 99999-9999</p>
-
+      <form id="form-cadastro">
+        <h3>Dados do Cliente</h3>
         <p>
-          <strong>Endereço:</strong> Rua dos Animais, 123 - Viamão/RS
+          <label for="nomeCliente">Nome Completo: *</label><br />
+          <input
+            type="text"
+            id="nomeCliente"
+            placeholder="Ex: Maria Silva"
+            required
+          />
         </p>
         <p>
-          <strong>Horário de atendimento:</strong> Segunda a sábado,
-          das 08:00h às 18:00h.
+          <label for="cpfCliente">CPF: *</label><br />
+          <input
+            type="text"
+            id="cpfCliente"
+            placeholder="000.000.000-00"
+            required
+          />
         </p>
-      </section>
+        <p>
+          <label for="sexoCliente">Sexo:</label><br />
+          <select id="sexoCliente">
+            <option value="">Selecione...</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="O">Outro</option>
+          </select>
+        </p>
+        <p>
+          <label for="telCliente">Telefone: *</label><br />
+          <input
+            type="tel"
+            id="telCliente"
+            placeholder="(00) 00000-0000"
+            required
+          />
+        </p>
+        <p>
+          <label for="emailCliente">E-mail: *</label><br />
+          <input
+            type="email"
+            id="emailCliente"
+            placeholder="exemplo@email.com"
+            required
+          />
+        </p>
+        <p>
+          <label for="endCliente">Endereço: *</label><br />
+          <input
+            type="text"
+            id="endCliente"
+            placeholder="Rua, Número, Bairro"
+            required
+          />
+        </p>
+
+        <hr />
+        <h3>Dados do Pet</h3>
+        <p>
+          <label for="nomePet">Nome do Pet: *</label><br />
+          <input
+            type="text"
+            id="nomePet"
+            placeholder="Ex: Rex"
+            required
+          />
+        </p>
+        <p>
+          <label for="racaPet">Raça: *</label><br />
+          <input
+            type="text"
+            id="racaPet"
+            placeholder="Ex: Poodle"
+            required
+          />
+        </p>
+        <p>
+          <label for="idadePet">Idade (anos): *</label><br />
+          <input
+            type="number"
+            id="idadePet"
+            min="0"
+            max="30"
+            placeholder="Ex: 3"
+            required
+          />
+        </p>
+
+        <button type="submit">Cadastrar</button>
+      </form>
     </main>
 
     <footer>
-      <hr />
-
-      <p>&copy; 2026 PetShop Amicão. Todos os direitos reservados.</p>
-
-      <p>E-mail: contato@petshopamicao.com.br</p>
-
-      <p>Telefone: (51) 99999-9999</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
-      </nav>
+      <p>
+        &copy; 2026 PetShop Amigo Fiel. Todos os direitos reservados.
+      </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

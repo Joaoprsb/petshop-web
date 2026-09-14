@@ -6,54 +6,102 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>PetShop Amicão</title>
+    <title>PetShop Amigo Fiel - Inicio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS Bootstrap apenas para o Carrossel e utilitarios -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>PetShop Amicão</h1>
-      <p>Cuidando do seu melhor amigo com carinho e dedicação</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
+      <h1>PetShop Amigo Fiel</h1>
+      <nav aria-label="Navegação Principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="servicos.html">Serviços e Agendamento</a></li>
+          <li><a href="contato.html">Contato e Cadastro</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Bem-vindo(a) ao PetShop Amicão!</h2>
-        <p>
-          O PetShop Amicão oferece produtos de qualidade e serviços
-          especializados para garantir a saúde, o conforto e a
-          felicidade do seu pet.
-        </p>
-        <p>
-          Em nosso catálogo você encontrará acessórios, rações e
-          produtos de higiene, além dos serviços de banho e tosa com
-          opção de tele-busca.
-        </p>
+    <!-- Saudacao dinamica JS -->
+    <div
+      style="text-align: center; padding: 10px; background: #f0f0f0"
+    >
+      <strong id="saudacao-tempo"></strong>
+    </div>
+
+    <main class="container my-4">
+      <!-- Carrossel da Fase 2 -->
+      <section aria-label="Destaques e Ofertas">
+        <div
+          id="petCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img
+                src="images/racoes/racao-premium-caes.png"
+                class="d-block w-100"
+                style="height: 300px; object-fit: contain"
+                alt="Pacote de Ração Premium para Cães Adultos da raça Golden Retriever"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/higiene/shampoo.png"
+                class="d-block w-100"
+                style="height: 300px; object-fit: contain"
+                alt="Frasco de Shampoo Neutro Especial para Cães e Gatos de Pele Sensível"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/acessorios/cama-para-pet.png"
+                class="d-block w-100"
+                style="height: 300px; object-fit: contain"
+                alt="Cama fofinha e aconchegante para cães e gatos de pequeno e médio porte"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#petCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark rounded-circle"
+              aria-hidden="true"
+            ></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#petCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark rounded-circle"
+              aria-hidden="true"
+            ></span>
+          </button>
+        </div>
       </section>
     </main>
 
     <footer>
-      <hr />
-
-      <p>&copy; 2026 PetShop Amicão. Todos os direitos reservados.</p>
-
-      <p>E-mail: contato@petshopamicao.com.br</p>
-
-      <p>Telefone: (51) 99999-9999</p>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-        <a href="ajuda.html">Ajuda</a>
-      </nav>
+      <p>
+        &copy; 2026 PetShop Amigo Fiel. Todos os direitos reservados.
+      </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
